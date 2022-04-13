@@ -1,0 +1,16 @@
+@media screen and (min-width: 1280px) {
+  .u-dn--pc {
+    display: none;
+  }
+}
+@media screen and (max-width: 1279px) {
+  .u-dn--tb {
+    display: none;
+  }
+}
+@media screen and (max-width: 799px) {
+  .u-dn--sp {
+    display: none;
+  }
+}
+/*# sourceMappingURL=u-dn.css.map */
