@@ -6,7 +6,7 @@
         <ul class="l-header__nav--list">
           <li class="l-header__nav--item"><a href="<?php echo esc_url(home_url()); ?>">ホーム</a></li>
           <li class="l-header__nav--item"><a href="<?php the_permalink(); ?>">お知らせ</a></li>
-          <li class="l-header__nav--item"><a href="<?php echo esc_url(get_term_link()) ?>">ブログ</a></li>
+          <li class="l-header__nav--item"><a href="">ブログ</a></li>
           <li class="l-header__nav--item"><a href="<?php the_permalink(8); ?>">コース・料金</a></li>
         </ul>
       </nav>

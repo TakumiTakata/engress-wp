@@ -105,7 +105,11 @@
                         echo $category[0]->cat_name;
                         ?>
                       </div>
-                      <img class="c-recommend__img c-blog-item__img" src="<?php the_post_thumbnail(); ?>" alt="サムネイル">
+                      <?php if (has_post_thumbnail()) : ?>
+                        <img class="c-recommend__img c-blog-item__img" src="<?php the_post_thumbnail_url(); ?>" alt="サムネイル">
+                      <?php else : ?>
+                        <img src="<?php echo get_template_directory_uri(); ?>/img/noimg.jpg" alt="ダミー画像">
+                      <?php endif; ?>
                     </div>
                     <div class="c-recommend__contents c-blog-item__contents">
                       <p class="c-recommend__date"><?php the_time('Y-m-d'); ?></p>
