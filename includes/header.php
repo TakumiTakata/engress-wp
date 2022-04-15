@@ -2,6 +2,9 @@
     <div class="l-header__inner">
       <div class="l-header__logo"><a href="#"><img class="l-header__logo--img" src="<?php echo get_template_directory_uri(); ?>/img/logo01.png" alt="ロゴ"></a>
       </div>
+
+      
+
       <nav class="l-header__nav l-header__nav u-dn--sp">
         <ul class="l-header__nav--list">
           <li class="l-header__nav--item"><a href="<?php echo esc_url(home_url()); ?>">ホーム</a></li>
