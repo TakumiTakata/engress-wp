@@ -426,6 +426,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .c-reception {
@@ -572,6 +573,7 @@ img {
   z-index: 1;
 }
 .c-blog-item__contents {
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -603,6 +605,23 @@ img {
 .c-bread-crump__link {
   font-size: 1.2rem;
   padding: 1.9rem 0;
+  display: inline-block;
+}
+@media screen and (max-width: 799px) {
+  .c-bread-crump__link {
+    padding: 1rem 0;
+  }
+}
+.c-bread-crump__link span {
+  display: inline-block;
+  max-width: 20rem;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c-bread-crump__link a {
+  text-decoration: underline;
 }
 
 .c-summary {
@@ -748,7 +767,7 @@ img {
 }
 .c-plans__body {
   height: 100%;
-  max-height: 41.4rem;
+  min-height: 41.4rem;
   border: 0.1rem solid #1B224C;
   border-top: none;
   padding: 0 2rem;
@@ -882,11 +901,15 @@ img {
   }
 }
 .c-archives__item-title {
+  display: -webkit-box;
   margin-top: 1.2rem;
   font-size: 2.6rem;
   font-weight: bold;
   line-height: 1.5;
   text-decoration: underline 0.2rem #1B224C;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 @media screen and (max-width: 799px) {
   .c-archives__item-title {
@@ -908,13 +931,38 @@ img {
 .c-pagination {
   margin-top: 10.9rem;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 @media screen and (max-width: 799px) {
   .c-pagination {
     margin-top: 6rem;
-    font-size: 1.6em;
   }
+}
+.c-pagination ul {
+  display: flex;
+  justify-content: center;
+}
+.c-pagination li {
+  margin-right: 1.9rem;
+}
+.c-pagination li:last-child {
+  margin-right: 0;
+}
+.c-pagination li .page-numbers {
+  display: inline-block;
+  min-width: 100%;
+  width: 5rem;
+  min-height: 100%;
+  height: 5rem;
+  border: 1px solid #1B224C;
+  line-height: 5rem;
+}
+.c-pagination li .page-numbers.current {
+  background: #1B224C;
+  color: #fff;
+}
+.c-pagination li .page-numbers.dots {
+  border: none;
 }
 
 .c-blog-contents__tag {
@@ -1257,6 +1305,10 @@ img {
   line-height: 2;
   margin-top: -0.4rem;
   text-decoration: underline;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   flex: 1;
 }
 .c-relation__category {
@@ -1799,6 +1851,7 @@ img {
   }
 }
 .c-case__card {
+  flex: 1;
   margin-right: 3.1rem;
 }
 @media screen and (max-width: 799px) {
@@ -1993,6 +2046,30 @@ img {
 .c-faq__q-text {
   font-size: 1.5rem;
   padding: 1.2rem 0;
+  position: relative;
+}
+.c-faq__q-text::before, .c-faq__q-text::after {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 0.3rem;
+  background: #1B224C;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+}
+.c-faq__q-text::after {
+  transform: translateY(-50%) rotate(90deg);
+  transition: 0.5s;
+}
+.c-faq__q-text.active::before {
+  opacity: 0;
+  transition: 0.5s;
+}
+.c-faq__q-text.active::after {
+  transform: rotate(0);
+  transition: 0.5s;
 }
 .c-faq__a-text {
   font-size: 1.6rem;
@@ -2159,6 +2236,12 @@ img {
     display: block;
     padding-bottom: 0;
   }
+}
+.p-home__blog {
+  flex: 1;
+}
+.p-home__news {
+  flex: 1;
 }
 
 .p-price__plans {
@@ -2741,16 +2824,16 @@ img {
 }
 
 .u-top-view--price {
-  background: url(../img/plan.jpg) center center/cover;
+  background: url(../img/tv-plan.jpg) center center/cover;
 }
 .u-top-view--blog {
-  background: url(../img/blog.jpg) center center/cover;
+  background: url(../img/tv-blog.jpg) center center/cover;
 }
 .u-top-view--news {
-  background: url(../img/news.jpg) center center/cover;
+  background: url(../img/tv-news.jpg) center center/cover;
 }
 .u-top-view--contact {
-  background: url(../img/cta.jpg) center center/cover;
+  background: url(../img/tv-cta.jpg) center center/cover;
 }
 
 .u-link {

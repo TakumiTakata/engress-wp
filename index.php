@@ -108,30 +108,30 @@
           <h2 class="c-case__title c-sub-title c-sub-title--white  c-sub-title--center">TOEFL成功事例</h2>
           <div class="c-case__card-wrap">
             <div class="c-case__card">
-              <p class="c-case__message">TOEFL iBT 100点を突破してコロンビア大学大学院に進学できました！</p>
-              <div class="c-case__img"><img src="<?php echo get_template_directory_uri(); ?>/img/model01.png" alt=""></div>
+              <p class="c-case__message"><?php the_field('message-1',2799); ?></p>
+              <div class="c-case__img"><img src="<?php the_field('img-1',2799); ?>" alt="イメージ"></div>
               <div class="c-case__status">
-                <p class="c-case__job">会社員</p>
-                <p class="c-case__name">T.Fujiyamaさん</p>
-                <p class="c-case__result">3ヶ月でTOEFL80→108点</p>
+                <p class="c-case__job"><?php the_field('job-1',2799); ?></p>
+                <p class="c-case__name"><?php the_field('name-1',2799); ?></p>
+                <p class="c-case__result"><?php the_field('result-1',2799); ?></p>
               </div>
             </div>
             <div class="c-case__card">
-              <p class="c-case__message">半年でTOEFL 40点→100点を達成！コロンビア大学大学院に合格</p>
-              <div class="c-case__img"><img src="<?php echo get_template_directory_uri(); ?>/img/model02.png" alt=""></div>
+              <p class="c-case__message"><?php the_field('message-2',2799); ?></p>
+              <div class="c-case__img"><img src="<?php the_field('img-2',2799); ?>" alt="イメージ"></div>
               <div class="c-case__status">
-                <p class="c-case__job">大学生</p>
-                <p class="c-case__name">Y.Takiyamaさん</p>
-                <p class="c-case__result">6ヶ月でTOEFL40→100点</p>
+                <p class="c-case__job"><?php the_field('job-2',2799); ?></p>
+                <p class="c-case__name"><?php the_field('name-2',2799); ?></p>
+                <p class="c-case__result"><?php the_field('result-2',2799); ?></p>
               </div>
             </div>
             <div class="c-case__card">
-              <p class="c-case__message">早稲田大学 国際教養学部AO入試合格！TOEFL iBT 109点</p>
-              <div class="c-case__img"><img src="<?php echo get_template_directory_uri(); ?>/img/model03.png" alt=""></div>
+              <p class="c-case__message"><?php the_field('message-3',2799); ?></p>
+              <div class="c-case__img"><img src="<?php the_field('img-3',2799); ?>" alt="イメージ"></div>
               <div class="c-case__status">
-                <p class="c-case__job">高校生</p>
-                <p class="c-case__name">M.Yamadaさん</p>
-                <p class="c-case__result">5ヶ月でTOEFL68→109点</p>
+                <p class="c-case__job"><?php the_field('job-3',2799); ?></p>
+                <p class="c-case__name"><?php the_field('name-3',2799); ?></p>
+                <p class="c-case__result"><?php the_field('result-3',2799); ?></p>
               </div>
             </div>
           </div>
@@ -209,7 +209,7 @@
       </section>
 
       <section class="p-home__archives  l-container--1col">
-        <div class="c-blog">
+        <div class="p-home__blog c-blog">
           <div class="c-blog__inner">
             <h2 class="c-blog__title c-sub-title c-sub-title--small">ブログ</h2>
             <ul class="c-blog__list">
@@ -242,7 +242,7 @@
           </div>
         </div>
 
-        <div class="c-news">
+        <div class="p-home__news c-news">
           <div class="c-news__inner">
             <h2 class="c-news__title c-sub-title c-sub-title--small">お知らせ</h2>
             <?php

@@ -29,9 +29,11 @@
           <ul class="c-news-summary__list">
             <hr class="c-news-summary__hr">
             <?php
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1;
             $args = array(
               'post_type' => 'news', // 投稿タイプを指定
               'posts_per_page' => 10, // 表示する記事数
+              'paged' => $paged,
             );
             $news_query = new WP_Query($args);
             if ($news_query->have_posts()) :
@@ -41,20 +43,21 @@
 
                 <li class="c-news-summary__item">
                   <p class="c-news-summary__date"><?php the_time('Y-m-d'); ?></p>
-                  <p class="c-news-summary__description"><?php the_title(); ?></p>
+                  <p class="c-news-summary__description"><a href="<?php the_permalink();?>"><?php the_title(); ?></a></p>
                 </li>
                 <hr class="c-news-summary__hr">
 
               <?php endwhile; ?>
               <!-- pager -->
-              <?php the_posts_pagination(
-                array(
-                  'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
-                  'prev_next'     => false, // 前・次ボタンの表示
-                  'type'          => 'list', // 戻り値の指定 (plain/list)
-                )
-              ); ?>
-          <div class="c-pagination">1 2 ... 3</div>
+              <nav class="c-pagination">
+                <?php echo paginate_links(
+                  array(
+                    'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+                    'prev_next'     => false, // 前・次ボタンの表示
+                    'type'          => 'list', // 戻り値の指定 (plain/list)
+                  )
+                ); ?>
+              </nav>
             <?php endif;
             wp_reset_postdata();
             ?>

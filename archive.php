@@ -73,7 +73,6 @@
                 'type'          => 'list', // 戻り値の指定 (plain/list)
               )
             ); ?>
-            <div class="c-pagination">1 2 ... 3</div>
           <?php else : ?>
             <p>記事が見つかりませんでした。</p>
           <?php endif; ?>
