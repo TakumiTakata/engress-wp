@@ -51,7 +51,7 @@
               お問い合わせいただきありがとうございます<br class="u-dn--sp">
               内容を確認した後、担当者よりご連絡いたします
             </p>
-            <a class="p-form__thanks-link u-link" href="">ホームへ戻る</a>
+            <a class="p-form__thanks-link u-link" href="<?php echo esc_url(home_url('/')); ?>">ホームへ戻る</a>
           </div>
         </section>
       </article>

@@ -7,3 +7,6 @@ $(".js-question").click(function() {
   $(this).next(".js-answer").addClass('test');
   $(this).next(".js-answer").fadeToggle();
 });
+
+//scroll hint
+new ScrollHint('.js-scrollable');

@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-  <? get_header(); ?>
+  <?php get_header(); ?>
 </head>
 
 <body class="l-body">
@@ -13,11 +13,11 @@
 
   <div class="c-bread-crump">
     <div class="l-container--1col">
-      <p class="c-bread-crump__link">
-        <a href="">ホーム</a>
-        ＞
-        <a href="">ブログ</a>
-      </p>
+      <div class="c-bread-crump__link breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <?php if (function_exists('bcn_display')) {
+          bcn_display();
+        } ?>
+      </div>
     </div>
   </div>
 
@@ -33,10 +33,9 @@
         <?php endif; ?>
 
         <div class="l-container--1col">
-          <ul class="c-archives__list">
-            <?php if (have_posts()) : ?>
+          <?php if (have_posts()) : ?>
+            <ul class="c-archives__list">
               <?php while (have_posts()) : the_post() ?>
-
                 <li class="c-archives__item c-blog-item">
                   <a class="c-blog-item__link" href="<?php the_permalink(); ?>">
                     <div class="c-archives__img-box c-blog-item__img-box">
@@ -65,19 +64,19 @@
                 </li>
 
               <?php endwhile; ?>
-          </ul>
-          <!-- pager -->
-          <?php the_posts_pagination(
-                array(
-                  'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
-                  'prev_next'     => false, // 前・次ボタンの表示
-                  'type'          => 'list', // 戻り値の指定 (plain/list)
-                )
-              ); ?>
-          <div class="c-pagination">1 2 ... 3</div>
-        <?php else : ?>
-          <p>記事が見つかりませんでした。</p>
-        <?php endif; ?>
+            </ul>
+            <!-- pager -->
+            <?php the_posts_pagination(
+              array(
+                'mid_size'      => 2, // 現在ページの左右に表示するページ番号の数
+                'prev_next'     => false, // 前・次ボタンの表示
+                'type'          => 'list', // 戻り値の指定 (plain/list)
+              )
+            ); ?>
+            <div class="c-pagination">1 2 ... 3</div>
+          <?php else : ?>
+            <p>記事が見つかりませんでした。</p>
+          <?php endif; ?>
         </div>
 
       </section>
@@ -89,7 +88,7 @@
   <?php get_template_part('includes/footer'); ?>
 
 
-  <? get_footer(); ?>
+  <?php get_footer(); ?>
 
 </body>
 

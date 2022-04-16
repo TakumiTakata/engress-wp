@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-  <? get_header(); ?>
+  <?php get_header(); ?>
 </head>
 
 <body class="l-body">
@@ -15,8 +15,8 @@
           日本人へのTOEFL指導歴豊かな講師陣の<br>
           コーチング型TOEFLスクール
         </p>
-        <a class="c-main-view__btn c-request-button c-request-button--top" href="">資料請求</a>
-        <a class="c-main-view__link c-contact-link" href="">お問い合わせ</a>
+        <a class="c-main-view__btn c-request-button c-request-button--top" href="#">資料請求</a>
+        <a class="c-main-view__link c-contact-link" href="<?php the_permalink('10'); ?>">お問い合わせ</a>
       </section>
 
       <section class="p-home__catch-copy c-catch-copy">
@@ -66,7 +66,7 @@
                   TOEFLではビジネス英語には登場しない数多くの学術的内容が出題されます。そのため、ベースとなる知識も必要になります。Engressでは過去1000題を分析し、最適なカリキュラムを組んでいます。
                 </p>
               </div>
-              <div class="c-concept__img"><img src="../img/feature01.jpg" alt="カリキュラム イメージ画像"></div>
+              <div class="c-concept__img"><img src="<?php echo get_template_directory_uri(); ?>/img/feature01.jpg" alt="カリキュラム イメージ画像"></div>
             </li>
             <li class="c-concept__item">
               <div class="c-concept__contents">
@@ -79,7 +79,7 @@
                   Engressの講師陣は、もともと日本人向けにTOEFLを教えていた人が大多数です。また全メンバーがTESOL(英語教授法)を取得しており、知識と経験を兼ね備えている教育のプロフェッショナルです。
                 </p>
               </div>
-              <div class="c-concept__img"><img src="../img/feature02.jpg" alt="カリキュラム イメージ画像"></div>
+              <div class="c-concept__img"><img src="<?php echo get_template_directory_uri(); ?>/img/feature02.jpg" alt="カリキュラム イメージ画像"></div>
             </li>
             <li class="c-concept__item">
               <div class="c-concept__contents">
@@ -91,7 +91,7 @@
                   Engressは高校生からサラリーマンまで様々な年齢層の方々が通われていますが、完全オーダーメイドのカリキュラムで柔軟に対応しているため、平均3ヶ月でTOEFLスコアを20点アップさせています。
                 </p>
               </div>
-              <div class="c-concept__img"><img src="../img/feature03.jpg" alt="カリキュラム イメージ画像"></div>
+              <div class="c-concept__img"><img src="<?php echo get_template_directory_uri(); ?>/img/feature03.jpg" alt="カリキュラム イメージ画像"></div>
             </li>
           </ul>
           <div class="c-concept__plan">
@@ -109,7 +109,7 @@
           <div class="c-case__card-wrap">
             <div class="c-case__card">
               <p class="c-case__message">TOEFL iBT 100点を突破してコロンビア大学大学院に進学できました！</p>
-              <div class="c-case__img"><img src="../img/model01.png" alt=""></div>
+              <div class="c-case__img"><img src="<?php echo get_template_directory_uri(); ?>/img/model01.png" alt=""></div>
               <div class="c-case__status">
                 <p class="c-case__job">会社員</p>
                 <p class="c-case__name">T.Fujiyamaさん</p>
@@ -118,7 +118,7 @@
             </div>
             <div class="c-case__card">
               <p class="c-case__message">半年でTOEFL 40点→100点を達成！コロンビア大学大学院に合格</p>
-              <div class="c-case__img"><img src="../img/model02.png" alt=""></div>
+              <div class="c-case__img"><img src="<?php echo get_template_directory_uri(); ?>/img/model02.png" alt=""></div>
               <div class="c-case__status">
                 <p class="c-case__job">大学生</p>
                 <p class="c-case__name">Y.Takiyamaさん</p>
@@ -127,7 +127,7 @@
             </div>
             <div class="c-case__card">
               <p class="c-case__message">早稲田大学 国際教養学部AO入試合格！TOEFL iBT 109点</p>
-              <div class="c-case__img"><img src="../img/model03.png" alt=""></div>
+              <div class="c-case__img"><img src="<?php echo get_template_directory_uri(); ?>/img/model03.png" alt=""></div>
               <div class="c-case__status">
                 <p class="c-case__job">高校生</p>
                 <p class="c-case__name">M.Yamadaさん</p>
@@ -213,42 +213,31 @@
           <div class="c-blog__inner">
             <h2 class="c-blog__title c-sub-title c-sub-title--small">ブログ</h2>
             <ul class="c-blog__list">
-              <li class="c-blog__item c-blog-item">
-                <a class="c-blog-item__link" href="">
-                  <div class="c-blog__img-box c-blog-item__img-box">
-                    <div class="c-blog__tag c-blog-item__img-tag">カテゴリー</div>
-                    <img class="c-blog__img c-blog-item__img" src="<?php echo get_template_directory_uri(); ?>/img/sample01.jpg" alt="サムネイル">
-                  </div>
-                  <div class="c-blog__contents c-blog-item__contents">
-                    <p class="c-blog__description">Engress説明会in大阪の模様をお伝えします</p>
-                    <p class="c-blog__date">2020-12-27</p>
-                  </div>
-                </a>
-              </li>
-              <li class="c-blog__item c-blog-item">
-                <a class="c-blog-item__link" href="">
-                  <div class="c-blog__img-box c-blog-item__img-box">
-                    <div class="c-blog__tag c-blog-item__img-tag">カテゴリー</div>
-                    <img class="c-blog__img c-blog-item__img" src="<?php echo get_template_directory_uri(); ?>/img/sample02.jpg" alt="サムネイル">
-                  </div>
-                  <div class="c-blog__contents c-blog-item__contents">
-                    <p class="c-blog__description">Engressもくもく会でみんなでTOEFL学習をしませんか？</p>
-                    <p class="c-blog__date">2020-12-01</p>
-                  </div>
-                </a>
-              </li>
-              <li class="c-blog__item c-blog-item">
-                <a class="c-blog-item__link" href="">
-                  <div class="c-blog__img-box c-blog-item__img-box">
-                    <div class="c-blog__tag c-blog-item__img-tag">カテゴリー</div>
-                    <img class="c-blog__img c-blog-item__img" src="<?php echo get_template_directory_uri(); ?>/img/sample03.jpg" alt="サムネイル">
-                  </div>
-                  <div class="c-blog__contents c-blog-item__contents">
-                    <p class="c-blog__description">TOEFL学習にはコーチング学習が最強である話</p>
-                    <p class="c-blog__date">2020-11-20</p>
-                  </div>
-                </a>
-              </li>
+              <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                  <li class="c-blog__item c-blog-item">
+                    <a class="c-blog-item__link" href="">
+                      <div class="c-blog__img-box c-blog-item__img-box">
+                        <div class="c-blog__tag c-blog-item__img-tag">
+                          <?php
+                          $category = get_the_category();
+                          echo $category[0]->cat_name;
+                          ?>
+                        </div>
+                        <?php if (has_post_thumbnail()) : ?>
+                          <img class="c-archives__img c-blog-item__img" src="<?php the_post_thumbnail_url(); ?>" alt="サムネイル">
+                        <?php else : ?>
+                          <img class="c-archives__img c-blog-item__img" src="<?php echo get_template_directory_uri(); ?>/img/noimg.jpg" alt="ダミー画像">
+                        <?php endif; ?>
+                      </div>
+                      <div class="c-blog__contents c-blog-item__contents">
+                        <p class="c-blog__description"><?php the_title(); ?></p>
+                        <p class="c-blog__date"><?php the_time('Y-m-d'); ?></p>
+                      </div>
+                    </a>
+                  </li>
+                <?php endwhile; ?>
+              <?php endif; ?>
             </ul>
           </div>
         </div>
@@ -256,26 +245,27 @@
         <div class="c-news">
           <div class="c-news__inner">
             <h2 class="c-news__title c-sub-title c-sub-title--small">お知らせ</h2>
-            <ul class="c-news__list">
-              <li class="c-news__item">
-                <a href="">
-                  <p class="c-news__date">2020-12-01</p>
-                  <p class="c-news__description">2021年のスケジュールについて</p>
-                </a>
-              </li>
-              <li class="c-news__item">
-                <a href="">
-                  <p class="c-news__date">2019-11-02</p>
-                  <p class="c-news__description">11月休校日のお知らせ</p>
-                </a>
-              </li>
-              <li class="c-news__item">
-                <a href="">
-                  <p class="c-news__date">2020-10-01</p>
-                  <p class="c-news__description">10月休校日のお知らせ</p>
-                </a>
-              </li>
-            </ul>
+            <?php
+            $args = [
+              'post_type' => 'news',
+              'posts_per_page' => 3,
+            ];
+            $my_query = new WP_Query($args); ?>
+            <?php if ($my_query->have_posts()) : // 投稿がある場合
+            ?>
+              <ul class="c-news__list">
+                <?php while ($my_query->have_posts()) : $my_query->the_post(); ?>
+                  <li class="c-news__item">
+                    <a href="<?php the_permalink(); ?>">
+                      <p class="c-news__date"><?php the_time('Y-m-d'); ?></p>
+                      <p class="c-news__description"><?php the_title(); ?></p>
+                    </a>
+                  </li>
+                <?php endwhile; ?>
+              </ul>
+            <?php else : ?>
+              <p>記事が見つかりませんでした。</p>
+            <?php endif; ?>
           </div>
         </div>
 
@@ -289,7 +279,7 @@
   <?php get_template_part('includes/footer'); ?>
 
 
-  <? get_footer(); ?>
+  <?php get_footer(); ?>
 </body>
 
 </html>

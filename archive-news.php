@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-  <? get_header(); ?>
+  <?php get_header(); ?>
 </head>
 
 <body class="l-body">
@@ -13,11 +13,11 @@
 
   <div class="c-bread-crump">
     <div class="l-container--1col">
-      <p class="c-bread-crump__link">
-        <a href="">ホーム</a>
-        ＞
-        <a href="">お知らせ</a>
-      </p>
+      <div class="c-bread-crump__link breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <?php if (function_exists('bcn_display')) {
+          bcn_display();
+        } ?>
+      </div>
     </div>
   </div>
 
@@ -69,7 +69,7 @@
   <?php get_template_part('includes/footer'); ?>
 
 
-  <? get_footer(); ?>
+  <?php get_footer(); ?>
 </body>
 
 </html>

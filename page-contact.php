@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-  <? get_header(); ?>
+  <?php get_header(); ?>
 </head>
 
 <body class="l-body p-form">
@@ -25,7 +25,8 @@
     <main>
       <article>
         <section class="p-form__contents l-container--form">
-          <form action="">
+          <?php the_content(); ?>
+          <!-- <form action="">
             <div class="p-form__form-wrap c-form">
               <p class="p-form__message c-form__text">弊社に興味を持って頂きありがとうございます。商談やサービスのご利用、資料請求について下記のフォームよりお問い合わせください。</p>
               <label class="p-form__label c-form__label" for="company">会社名</label>
@@ -69,7 +70,7 @@
 
               <div class="p-form__submit-button c-form__submit-button"><input class="c-form__submit-text" type="submit" value="送信する"></div>
             </div>
-          </form>
+          </form> -->
 
 
         </section>
@@ -81,7 +82,7 @@
   <?php get_template_part('includes/footer'); ?>
 
 
-  <? get_footer(); ?>
+  <?php get_footer(); ?>
 
 </body>
 

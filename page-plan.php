@@ -2,7 +2,7 @@
 <html lang="ja">
 
 <head>
-  <? get_header(); ?>
+  <?php get_header(); ?>
 </head>
 
 <body class="l-body">
@@ -13,11 +13,11 @@
 
   <div class="c-bread-crump">
     <div class="l-container--1col">
-      <p class="c-bread-crump__link">
-        <a href="">ホーム</a>
-        ＞
-        <a href="">料金体系</a>
-      </p>
+      <div class="c-bread-crump__link breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <?php if (function_exists('bcn_display')) {
+          bcn_display();
+        } ?>
+      </div>
     </div>
   </div>
 
@@ -39,13 +39,18 @@
 
           <div class="p-price__plans">
             <h2 class="c-plans__title c-sub-title c-sub-title--small c-sub-title--center">料金表</h2>
-            <ul class="c-plans__cards">
+            <ul class="c-plans__cards js-scrollable">
               <li class="c-plans__card">
                 <div class="c-plans__header">
                   <p class="c-plans__header-txt">基礎プラン</p>
                 </div>
                 <div class="c-plans__body">
-                  <p class="c-plans__price">59,000円~</p>
+                  <p class="c-plans__price">
+                    <?php
+                    $price = number_format(get_field('basic'));
+                    echo $price . '円~';
+                    ?>
+                  </p>
                   <p class="c-plans__attention">*月額（税抜価格）</p>
                   <ul class="c-plans__list">
                     <li class="c-plans__list-item"><span class="c-plans__check"></span>カリキュラム作成</li>
@@ -59,7 +64,12 @@
                   <p class="c-plans__header-txt">演習プラン</p>
                 </div>
                 <div class="c-plans__body">
-                  <p class="c-plans__price">75,000円~</p>
+                <p class="c-plans__price">
+                    <?php
+                    $price = number_format(get_field('exercises'));
+                    echo $price . '円~';
+                    ?>
+                  </p>
                   <p class="c-plans__attention">*月額（税抜価格）</p>
                   <ul class="c-plans__list">
                     <li class="c-plans__list-item"><span class="c-plans__check"></span>カリキュラム作成</li>
@@ -75,7 +85,12 @@
                   <p class="c-plans__header-txt">志望校対策プラン</p>
                 </div>
                 <div class="c-plans__body">
-                  <p class="c-plans__price c-plans__price--rec">95,000円~</p>
+                <p class="c-plans__price">
+                    <?php
+                    $price = number_format(get_field('counter'));
+                    echo $price . '円~';
+                    ?>
+                  </p>
                   <p class="c-plans__attention">*月額（税抜価格）</p>
                   <ul class="c-plans__list">
                     <li class="c-plans__list-item"><span class="c-plans__check"></span>カリキュラム作成</li>
@@ -91,7 +106,12 @@
                   <p class="c-plans__header-txt">フレックスプラン</p>
                 </div>
                 <div class="c-plans__body">
-                  <p class="c-plans__price">60,000円~</p>
+                <p class="c-plans__price">
+                    <?php
+                    $price = number_format(get_field('flex'));
+                    echo $price . '円~';
+                    ?>
+                  </p>
                   <p class="c-plans__attention">*月額（税抜価格）</p>
                   <ul class="c-plans__list">
                     <li class="c-plans__list-item">＊別途ご相談ください</li>
@@ -110,7 +130,7 @@
   <?php get_template_part('includes/footer'); ?>
 
 
-  <? get_footer(); ?>
+  <?php get_footer(); ?>
 
 </body>
 
