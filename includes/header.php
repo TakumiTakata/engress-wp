@@ -26,7 +26,7 @@
       <p class="c-reception__num"><span class="c-reception__num--icon"><img src="<?php echo get_template_directory_uri(); ?>/img/icon-tell.png"></span>0123-456-7890</p>
     </div>
 
-    <a href="#" class="l-header__button c-header-button  c-header-button--request u-dn--sp">資料請求</a>
+    <a href="<?php the_permalink('10'); ?>" class="l-header__button c-header-button  c-header-button--request u-dn--sp">資料請求</a>
     <a href="<?php the_permalink('10'); ?>" class="l-header__button c-header-button  c-header-button--inquiry u-dn--sp">お問い合わせ</a>
     <div class="l-header__hamburger c-hamburger">
       <div class="c-hamburger__button js-ham-button">
@@ -43,8 +43,8 @@
               </li>
             <?php endforeach; ?>
           </ul>
-          <a href="#" class="c-hamburger__menu-item c-hamburger__menu-button c-header-button  c-header-button--request">資料請求</a>
-          <a href="<?php get_permalink('10'); ?>" class="c-hamburger__menu-item c-hamburger__menu-button c-header-button  c-header-button--inquiry">お問い合わせ</a>
+          <a href="<?php the_permalink('10'); ?>" class="c-hamburger__menu-item c-hamburger__menu-button c-header-button  c-header-button--request">資料請求</a>
+          <a href="<?php the_permalink('10'); ?>" class="c-hamburger__menu-item c-hamburger__menu-button c-header-button  c-header-button--inquiry">お問い合わせ</a>
         </div>
       </div>
     </div>

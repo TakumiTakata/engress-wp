@@ -85,7 +85,7 @@
                   <p class="c-plans__header-txt">志望校対策プラン</p>
                 </div>
                 <div class="c-plans__body">
-                <p class="c-plans__price">
+                <p class="c-plans__price c-plans__price--rec">
                     <?php
                     $price = number_format(get_field('counter'));
                     echo $price . '円~';

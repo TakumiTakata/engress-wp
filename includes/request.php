@@ -1,7 +1,7 @@
 <div class="l-request">
     <div class="l-request__contents">
       <h2 class="l-request__title">まずは無料で資料請求から</h2>
-      <a class="l-request__btn c-request-button c-request-button--footer" href="#">資料請求</a>
+      <a class="l-request__btn c-request-button c-request-button--footer" href="<?php the_permalink('10'); ?>">資料請求</a>
       <a class="l-request__link c-contact-link" href="<?php the_permalink('10'); ?>">お問い合わせ</a>
     </div>
     <div class="l-request__tell">

@@ -15,7 +15,7 @@
           日本人へのTOEFL指導歴豊かな講師陣の<br>
           コーチング型TOEFLスクール
         </p>
-        <a class="c-main-view__btn c-request-button c-request-button--top" href="#">資料請求</a>
+        <a class="c-main-view__btn c-request-button c-request-button--top" href="<?php the_permalink('10'); ?>">資料請求</a>
         <a class="c-main-view__link c-contact-link" href="<?php the_permalink('10'); ?>">お問い合わせ</a>
       </section>
 
@@ -216,7 +216,7 @@
               <?php if (have_posts()) : ?>
                 <?php while (have_posts()) : the_post(); ?>
                   <li class="c-blog__item c-blog-item">
-                    <a class="c-blog-item__link" href="">
+                    <a class="c-blog-item__link" href="<?php the_permalink(); ?>">
                       <div class="c-blog__img-box c-blog-item__img-box">
                         <div class="c-blog__tag c-blog-item__img-tag">
                           <?php
